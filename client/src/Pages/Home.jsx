@@ -54,7 +54,7 @@ const Home = () => {
             <select name="date" id="" onChange={(e)=>handleChange(e)}>
               <option value="">Choose</option>
               <option value="07-07-2023">7th July</option>
-              <option value="08-08-2023">8th July</option>
+              <option value="08-07-2023">8th July</option>
             </select>
           </div>
         </div>
