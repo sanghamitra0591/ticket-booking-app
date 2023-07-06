@@ -31,7 +31,7 @@ const Navbar = () => {
         </div>
         <div style={{width: "30%", display: "flex", justifyContent: "space-between", alignItems: "center", color: "color"}}>
             <Link style={{color:"black", textDecoration:"none", fontSize:"21px"}} to="/">Home</Link>
-            <Link style={{color:"black", textDecoration:"none", fontSize:"21px"}} to="/ticket">Book Ticket</Link>
+            {/* <Link style={{color:"black", textDecoration:"none", fontSize:"21px"}} to="/ticket">Book Ticket</Link> */}
             <Link style={{color:"black", textDecoration:"none", fontSize:"21px"}} to="/cart">Cart</Link>
             <button onClick={()=>handleLogout()}>Logout</button>
         </div>
