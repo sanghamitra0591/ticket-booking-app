@@ -40,12 +40,12 @@ UserRouter.post("/signup", async(req, res)=>{
                 await newData.save();
                 res.send({"msg": "Successfully signed up"})
             }else {
-                res.send({"error": error})
+                res.send({"err": err})
                 console.log(err);
             }
         })
     } catch (error) {
-        res.send({"error": "Something went wrong"})
+        res.send({"error": error})
         console.log(error)
     }
 })

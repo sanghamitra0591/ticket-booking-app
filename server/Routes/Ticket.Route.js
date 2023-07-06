@@ -4,32 +4,32 @@ const { TicketModel } = require("../Models/Ticket.Model");
 const TicketRouter= express.Router();
 
 TicketRouter.get("/", async(req, res)=>{
-    const {sort, airline, search}= req.query;
+    const {destination, date, sort, airline, search}= req.query;
     try {
-        if(sort && airline){
+        if(destination && date && sort && airline){
             if(sort==="asc" && airline){
-                const data= await TicketModel.find({airline}).sort({price : 1});
+                const data= await TicketModel.find({airline, destination, date}).sort({price : 1});
                 res.send(data);
             }else if(sort==="desc" && airline){
-                const data= await TicketModel.find({airline}).sort({price : -1});
+                const data= await TicketModel.find({airline, destination, date}).sort({price : -1});
                 res.send(data);
             }
         }else if(sort){
             if(sort==="asc"){
-                const data= await TicketModel.find().sort({price : 1});
+                const data= await TicketModel.find({destination, date}).sort({price : 1});
                 res.send(data);
             }else if(sort==="desc"){
-                const data= await TicketModel.find().sort({price : -1});
+                const data= await TicketModel.find({destination, date}).sort({price : -1});
                 res.send(data);
             }
         }else if(airline){
-            const data= await TicketModel.find({airline});
+            const data= await TicketModel.find({airline, destination, date});
             res.send(data);
         }else if(search){
-            const data= await TicketModel.find({"name" : {"$regex" : search, "$options" : "i"}});
+            const data= await TicketModel.find({destination, date,"airline" : {"$regex" : search, "$options" : "i"}});
             res.send(data);
         }else{
-            const data= await TicketModel.find();
+            const data= await TicketModel.find({destination, date});
             res.send(data);
         }
     } catch (error) {
