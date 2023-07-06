@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import MainRoute from './Routes/MainRoute';
 
 function App() {
   return (
