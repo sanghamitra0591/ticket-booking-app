@@ -5,6 +5,9 @@ const app= express();
 
 const cors= require("cors");
 const { UserRouter } = require("./Routes/User.Route");
+const { TicketRouter } = require("./Routes/Ticket.Route");
+const { CartRouter } = require("./Routes/Cart.Route");
+const { validator } = require("./Middlewares/Validator.Middleware");
 
 app.use(cors({
     origin: "*"
@@ -21,6 +24,10 @@ app.get("/", (req, res)=>{
 app.use("/user", UserRouter);
 
 app.use(validator);
+
+app.use("/ticket", TicketRouter);
+
+app.use("/cart", CartRouter);
 
 
 
