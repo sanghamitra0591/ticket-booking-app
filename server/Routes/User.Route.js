@@ -38,7 +38,7 @@ UserRouter.post("/signup", async(req, res)=>{
                 const newData= new UserModel({...data, "password": hash});
                 console.log({...data, password: hash});
                 await newData.save();
-                res.send({"msg": "Successfully signed up"})
+                res.send({"message": "Successfully signed up"})
             }else {
                 res.send({"err": err})
                 console.log(err);
@@ -59,7 +59,7 @@ UserRouter.post("/login", async(req, res)=>{
             bcrypt.compare(data.password, isUser[0].password, (err, result)=>{
                 if(result){
                     const token = jwt.sign({userId:isUser[0]._id}, process.env.privateKey);
-                    res.send({"msg": "Login Sucessful", "token" : token});
+                    res.send({"message": "Login Successful", "token" : token});
                 }else{
                     res.send({"message": "Please enter correct password"});
                 }

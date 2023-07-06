@@ -27,9 +27,15 @@ const Login = () => {
           }
       }).then((r)=>r.json())
       .then((r)=>{
-        alert("Successfully Logged in");
-        localStorage.setItem("token", JSON.stringify(r.token));
-        navigate("/");
+        if(r.message==='User is not registered'){
+          alert("User is not registered")
+        }else if(r.message==="Login Successful"){
+          alert("Login Sucessful");
+          localStorage.setItem("token", JSON.stringify(r.token));
+          navigate("/");
+        }else{
+          alert("Please enter correct password");
+        }
       })
       .catch((e)=>console.log({"error":e}))
     }else{

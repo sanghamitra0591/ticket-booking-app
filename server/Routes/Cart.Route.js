@@ -4,8 +4,9 @@ const { CartModel } = require("../Models/Cart.Model");
 const CartRouter= express.Router();
 
 CartRouter.get("/", async(req, res)=>{
+    const userId= req.body.userId;
     try {
-        const data= await CartModel.find();
+        const data= await CartModel.find({userId});
         res.send(data);
     } catch (error) {
         res.send({"error": error})
@@ -25,7 +26,7 @@ CartRouter.post("/add", async(req, res)=>{
     }
 })
 
-CartRouter.delete("/:id", async(req, res)=>{
+CartRouter.delete("/delete/:id", async(req, res)=>{
     const id= req.params.id;
     try {
         await CartModel.findByIdAndDelete({"_id": id});
