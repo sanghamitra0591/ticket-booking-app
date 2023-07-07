@@ -42,7 +42,7 @@ const Signup = () => {
       <div style={{width:"40%", margin:"auto", padding:"50px"}}>
         <input style={{marginTop:"10px"}} name="username" type="text" onChange={handleChange} placeholder="Enter Username here" /><br/>
         <input style={{marginTop:"10px"}} name="email" type="email" onChange={handleChange} placeholder="Enter Email here" /><br/>
-        <input style={{marginTop:"10px"}} name="password" type="text" onChange={handleChange} placeholder= "Enter Password here" /><br/>
+        <input style={{marginTop:"10px"}} name="password" type="password" onChange={handleChange} placeholder= "Enter Password here" /><br/>
         <button onClick={handleSignup} style={{marginTop:"10px"}}>Signup</button>
       </div>
     </div>
