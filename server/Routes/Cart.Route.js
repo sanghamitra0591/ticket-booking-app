@@ -26,6 +26,18 @@ CartRouter.post("/add", async(req, res)=>{
     }
 })
 
+CartRouter.patch("/edit/:id", async(req, res)=>{
+    const id= req.params.id;
+    const data= req.body;
+    try {
+        await CartModel.findByIdAndUpdate({"_id": id}, data);
+        res.send("Added the seat number")
+    } catch (error) {
+        console.log({"error":error});
+        res.send("Unable to add seat")
+    }
+})
+
 CartRouter.delete("/delete/:id", async(req, res)=>{
     const id= req.params.id;
     try {

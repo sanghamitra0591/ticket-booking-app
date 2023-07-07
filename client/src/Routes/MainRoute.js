@@ -4,8 +4,10 @@ import Home from '../Pages/Home'
 import Login from '../Pages/Login'
 import Signup from '../Pages/Signup'
 import Ticket from '../Pages/Ticket'
-import Ticketdetails from '../Pages/Ticketdetails'
 import Cart from '../Pages/Cart'
+import SeatSelection from '../Pages/SeatSelection'
+import Checkout from '../Pages/Checkout'
+import Otp from '../Pages/Otp'
 
 const MainRoute = () => {
   return (
@@ -14,8 +16,10 @@ const MainRoute = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/ticket" element={<Ticket />} />
-      <Route path="/ticket/:id" element={<Ticketdetails />} />
+      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/ticket/seat/:id" element={<SeatSelection />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/otp" element={<Otp />} />
     </Routes>
   )
 }

@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Ticket = () => {
 
   const token= JSON.parse(localStorage.getItem("token"));
+
+  const navigate= useNavigate();
 
   const {destination, date}= JSON.parse(localStorage.getItem("data"));
 
@@ -30,22 +33,12 @@ const Ticket = () => {
   }
 
   const handleCart= (el, id)=>{
-    fetch(`https://agile-neckerchief-fox.cyclic.app/cart/add`, {
-          method: "POST",
-          body: JSON.stringify({ticket: {...el, ticketId:id}, quantity:1}),
-          headers: {
-            "Content-Type" : "application/json",
-            "authorization" : token
-          }
-      }).then((r)=>r.json())
-      .then((r)=>{
-        alert("Added to cart")
-      })
-      .catch((e)=>console.log({"error":e}))
+      localStorage.setItem("tempcart", JSON.stringify({ticket: {...el, ticketId:id}, quantity:1}))
+      navigate(`/ticket/seat/:${id}`);
   }
 
   return (
-    <div>
+    <div style={{paddingTop: "70px", background: "url(https://images.pond5.com/modern-light-blue-background-smooth-088763980_prevstill.jpeg)"}}>
       <div style={{width: "90%", margin: "auto"}}>
         <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "15px"}}>
           <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
@@ -67,7 +60,7 @@ const Ticket = () => {
           </div>
         </div>
         {data && data.map((el)=>{
-          return <div key={el._id} style={{border: "1px solid black", borderRadius: "10px", padding: "10px"}}>
+          return <div key={el._id} style={{border: "1px solid black", borderRadius: "10px", padding: "10px", marginBottom: "15px"}}>
             <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "15px"}}>
               <div>
                 <h2>{el.airline}</h2>
@@ -90,7 +83,7 @@ const Ticket = () => {
                 <p>Per traveller</p>
               </div>
               <div>
-                <button onClick={()=>handleCart(el, el._id)}>Add to Cart</button>
+                <button style={{padding: "10px", backgroundColor: "#357187", color: "white", borderRadius: "10px"}} onClick={()=>handleCart(el, el._id)}>Add to Cart</button>
               </div>
             </div>
           </div>

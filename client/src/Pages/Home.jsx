@@ -39,8 +39,8 @@ const Home = () => {
   }
 
   return (
-    <div style={{height: "90vh", backgroundColor: "#adad85", paddingTop: "30px"}}>
-      <div style={{width: "80%", margin: "auto", backgroundColor: "white", borderRadius: "15px", padding: "30px"}}>
+    <div style={{height: "95vh", paddingTop: "70px", background: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqkdnv184NZJSy0g3xMfv-7GGg6y2PjbWKcQ&usqp=CAU)", paddingTop: "30px"}}>
+      <div style={{width: "70%", margin: "auto", background: "url(https://media.istockphoto.com/id/1139678803/vector/horizontal-vector-illustration-of-an-empty-sky-blue-coloured-grungy-textured-background.jpg?s=612x612&w=0&k=20&c=tFTrwphz8pXtrmJGrEFBAnk9anQmRPHp3C8a3kQql7M=)", borderRadius: "15px", padding: "30px", marginTop: "100px"}}>
         <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
           <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
           <h2>From</h2>
@@ -69,7 +69,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <button onClick={()=>handleSearch()}>Search</button>
+          <button style={{padding: "10px", backgroundColor: "#357187", color: "white", borderRadius: "10px"}} onClick={()=>handleSearch()}>Search</button>
         </div>
       </div>
     </div>

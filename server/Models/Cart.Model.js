@@ -11,7 +11,8 @@ const cartSchema= mongoose.Schema({
         departure: String,
         price: Number,
         stops: Number,
-        destination: String
+        destination: String,
+        seat: Number
     },
     quantity: Number
 })
