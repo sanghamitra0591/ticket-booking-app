@@ -10,6 +10,8 @@ const Home = () => {
     "date" : ""
   })
 
+  const [from, setFrom]= useState("");
+
   const navigate= useNavigate();
 
   const handleChange= (e) => {
@@ -18,9 +20,13 @@ const Home = () => {
     setInitData({...initdata, [name]: value});
   }
 
+  const handleFrom= (e)=>{
+    setFrom(e.target.value);
+  }
+
   const handleSearch= () => {
     if(token){
-      if(initdata.destination!=="" && initdata.date!==""){
+      if(initdata.destination!=="" && initdata.date!=="" && from!==""){
         localStorage.setItem("data", JSON.stringify(initdata));
         navigate("/ticket");
       }else{
@@ -36,8 +42,12 @@ const Home = () => {
     <div style={{height: "90vh", backgroundColor: "#adad85", paddingTop: "30px"}}>
       <div style={{width: "80%", margin: "auto", backgroundColor: "white", borderRadius: "15px", padding: "30px"}}>
         <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-          <div>
-            <h2>Delhi</h2>
+          <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+          <h2>From</h2>
+            <select name="from" id="" onChange={(e)=>handleFrom(e)}>
+              <option value="">Select</option>
+              <option value="Delhi">Delhi</option>
+            </select>
           </div>
           <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
             <h2>Destination</h2>
