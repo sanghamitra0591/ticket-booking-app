@@ -2,7 +2,7 @@
 
 # Project Name -  Ticket Booking App
 
-<img src='https://i.postimg.cc/KcfL31Fb/ticket-home.png' alt="logo" />
+<img src='https://i.postimg.cc/vTRkw0qr/ticket-homepage.png' alt="logo" />
 
 ## OTP for Payment:- 1234
 
@@ -48,7 +48,7 @@ This website is made using HTML, CSS, JavaScript, React.js, Node.js, Express.js,
 * Removing from cart and Payment by entering card details and OTP
 
 <h1>Home Page</h1>
-<img src='https://i.postimg.cc/KcfL31Fb/ticket-home.png' alt="logo" />
+<img src='https://i.postimg.cc/vTRkw0qr/ticket-homepage.png' alt="logo" />
 <br />
 <hr />
 
