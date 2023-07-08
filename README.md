@@ -7,13 +7,13 @@ frontend deployed link :- https://ticket-booking-app-drab.vercel.app/
 
 # Project Name -  Ticket Booking App
 
-<img src='https://flyclipart.com/thumb2/plane-ticket-png-icon-free-download-411543.png' alt="logo" />
+<img style={{width: "150px"}} src='https://flyclipart.com/thumb2/plane-ticket-png-icon-free-download-411543.png' alt="logo" />
+
+## OTP for Payment:- 1234
 
 <a target="blank" href="https://ticket-booking-app-drab.vercel.app/">Deployed Link (Frontend)</a>
 
 <a target="blank" href="https://agile-neckerchief-fox.cyclic.app/">Deployed Link (Backend)</a>
-
-## OTP for Payment:- 1234
 
 <br />
 
