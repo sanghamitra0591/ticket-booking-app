@@ -48,7 +48,7 @@ This website is made using HTML, CSS, JavaScript, React.js, Node.js, Express.js,
 * Removing from cart and Payment by entering card details and OTP
 
 <h1>Home Page</h1>
-<img src='https://i.postimg.cc/vTRkw0qr/ticket-homepage.png' />
+<img src='https://i.postimg.cc/8PkQp0k4/tickethome.png' />
 <br />
 <hr />
 
