@@ -7,7 +7,7 @@ frontend deployed link :- https://ticket-booking-app-drab.vercel.app/
 
 # Project Name -  Ticket Booking App
 
-<img style={{width: "150px"}} src='https://flyclipart.com/thumb2/plane-ticket-png-icon-free-download-411543.png' alt="logo" />
+<img width: "150px" src='https://flyclipart.com/thumb2/plane-ticket-png-icon-free-download-411543.png' alt="logo" />
 
 ## OTP for Payment:- 1234
 
