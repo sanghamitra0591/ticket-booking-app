@@ -2,7 +2,7 @@
 
 # Project Name -  Ticket Booking App
 
-<img src='https://i.postimg.cc/vTRkw0qr/ticket-homepage.png' />
+<img src='https://i.postimg.cc/8PkQp0k4/tickethome.png' />
 
 ## OTP for Payment:- 1234
 
