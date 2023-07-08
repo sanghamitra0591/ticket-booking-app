@@ -2,7 +2,7 @@
 
 # Project Name -  Ticket Booking App
 
-<img src='https://flyclipart.com/thumb2/plane-ticket-png-icon-free-download-411543.png' alt="logo" />
+<img src='https://i.postimg.cc/KcfL31Fb/ticket-home.png' alt="logo" />
 
 ## OTP for Payment:- 1234
 
@@ -46,3 +46,33 @@ This website is made using HTML, CSS, JavaScript, React.js, Node.js, Express.js,
 * Sorting and filtering Tickets
 * Seat Selection and adding to cart
 * Removing from cart and Payment by entering card details and OTP
+
+<h1>Home Page</h1>
+<img src="https://i.postimg.cc/KcfL31Fb/ticket-home.png" />
+<br />
+<hr />
+
+<h1>Login Page</h1>
+<img src="https://i.postimg.cc/mgsy70Jf/ticket-login.png" />
+<br />
+<hr />
+
+<h1>Booking Page</h1>
+<img src="https://i.postimg.cc/6pWGWwF3/ticket-bokking.png" />
+<br />
+<hr />
+
+<h1>Seat Selection Page</h1>
+<img src="https://i.postimg.cc/43CkvNZ4/ticket-seat.png" />
+<br />
+<hr />
+
+<h1>Cart Page</h1>
+<img src="https://i.postimg.cc/cCLV1v7h/ticket-cart.png" />
+<br />
+<hr />
+
+<h1>Checkout Page</h1>
+<img src="https://i.postimg.cc/ydvbGVqZ/ticket-checkout.png" />
+<br />
+<hr />
